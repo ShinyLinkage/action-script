@@ -8,3 +8,12 @@ if [ "$2" == 'production' ] || [ "$1" == 'app-store' ]; then
 else
   echo "description=测试站" >> $GITHUB_ENV
 fi
+#machine api.mapbox.com
+#login mapbox
+#password <INSERT API TOKEN>
+echo "machine api.mapbox.com" >> ~/.netrc
+echo "login mapbox" >> ~/.netrc
+echo "password $3" >> ~/.netrc
+chmod 600 ~/.netrc
+cat ~/.netrc
+
